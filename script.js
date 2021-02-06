@@ -48,7 +48,7 @@ btnScrollto.addEventListener('click', function (e) {
     document.documentElement.clientHeight,
     document.documentElement.clientWidth
   );
-
+  ///////////////////////////////////////
   //Scrolling
 
   //Method1
