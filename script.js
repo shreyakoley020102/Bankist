@@ -50,8 +50,17 @@ btnScrollto.addEventListener('click', function (e) {
   );
 
   //Scrolling
-  window.scrollTo(
-    s1coords.left + window.pageXOffset,
-    s1coords.top + window.pageYOffset
-  );
+
+  //Method1
+
+  //window.scrollTo(
+  //  s1coords.left + window.pageXOffset,
+  //  s1coords.top + window.pageYOffset
+  // );
+
+  window.scrollTo({
+    left: s1coords.left + window.pageXOffset,
+    top: s1coords.top + window.pageYOffset,
+    behavior: 'smooth',
+  });
 });
