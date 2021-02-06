@@ -88,3 +88,8 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+//Sticky Navbar
+window.addEventListener('scroll', function () {
+  console.log(window.scrollY);
+});
