@@ -93,12 +93,17 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 
 ///////////////////////////////////////
 // Sticky navigation
-const initialCoords = section1.getBoundingClientRect();
-console.log(initialCoords);
+//const initialCoords = section1.getBoundingClientRect();
+//console.log(initialCoords);
 
-window.addEventListener('scroll', function () {
-  console.log(window.scrollY);
+//window.addEventListener('scroll', function () {
+//  console.log(window.scrollY);
 
-  if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
-  else nav.classList.remove('sticky');
-});
+//  if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
+//  else nav.classList.remove('sticky');
+//});
+
+///////////////////////////////////////
+// Sticky navigation: Intersection Observer API
+const observer = new IntersectionObserver();
+observer.observe(section1);
