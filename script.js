@@ -125,12 +125,15 @@ const header = document.querySelector('.header');
 const stickyNAv = function (entries) {
   const [entry] = entries;
   console.log(entry);
-  nav.classList.add('sticky');
+
+  if (!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
 };
 
 const headerObserver = new IntersectionObserver(stickyNAv, {
   root: null,
   threshold: 0,
+  rootMargin: '-90px',
 });
 
 headerObserver.observe(header);
