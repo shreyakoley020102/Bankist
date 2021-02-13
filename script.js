@@ -121,6 +121,8 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 //observer.observe(section1);
 
 const header = document.querySelector('.header');
+const navHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
 
 const stickyNAv = function (entries) {
   const [entry] = entries;
@@ -133,7 +135,7 @@ const stickyNAv = function (entries) {
 const headerObserver = new IntersectionObserver(stickyNAv, {
   root: null,
   threshold: 0,
-  rootMargin: '-90px',
+  rootMargin: `-${navHeight}px`,
 });
 
 headerObserver.observe(header);
