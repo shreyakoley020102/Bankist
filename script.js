@@ -119,3 +119,18 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 
 //const observer = new IntersectionObserver(obsCallback, obsOptions);
 //observer.observe(section1);
+
+const header = document.querySelector('.header');
+
+const stickyNAv = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+  nav.classList.add('sticky');
+};
+
+const headerObserver = new IntersectionObserver(stickyNAv, {
+  root: null,
+  threshold: 0,
+});
+
+headerObserver.observe(header);
