@@ -1,2 +1,2 @@
 # Bankist
-My very own Bank Website
+Let me launch my bank's website
