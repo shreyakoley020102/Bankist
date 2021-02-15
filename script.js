@@ -215,6 +215,8 @@ const goToSlide = function (slide) {
   );
 };
 
+goToSlide(0);
+
 //-100%, 0, 100%, 200%, 300%
 
 //Next Slide
