@@ -230,8 +230,14 @@ const nextSlide = function () {
   goToSlide(curSlide);
 };
 
+//Prev Slide
 const prevSlide = function () {
-  curSlide--;
+  if (curSlide === 0) {
+    curSlide = maxSlide - 1;
+  } else {
+    curSlide--;
+  }
+
   goToSlide(curSlide);
 };
 
