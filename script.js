@@ -209,7 +209,11 @@ const slider = document.querySelector('.slider');
 slider.style.transform = 'scale(0.4) translateX(-800px)';
 slider.style.overflow = 'visible';
 
-slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
 
 //-100%, 0, 100%, 200%, 300%
 
@@ -221,7 +225,5 @@ btnRight.addEventListener('click', function () {
     curSlide++;
   }
 
-  slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`)
-  );
+  goToSlide(curSlide);
 });
