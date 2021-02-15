@@ -220,7 +220,7 @@ goToSlide(0);
 //-100%, 0, 100%, 200%, 300%
 
 //Next Slide
-btnRight.addEventListener('click', function () {
+const nextSlide = function () {
   if (curSlide === maxSlide - 1) {
     curSlide = 0;
   } else {
@@ -228,4 +228,6 @@ btnRight.addEventListener('click', function () {
   }
 
   goToSlide(curSlide);
-});
+};
+
+btnRight.addEventListener('click', nextSlide);
